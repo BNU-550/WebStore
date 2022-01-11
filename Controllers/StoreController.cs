@@ -19,22 +19,22 @@ namespace WebStore.Controllers
         // GET: Store
         public ActionResult Index()
         {
-            var Brand = _context.Brands.ToList();
-            return View(Brand);
+            var brand = _context.Brands.ToList();
+            return View(brand);
         }
 
         public ActionResult Browse(string brand)
         {
             //Protection against outside users modifying code
             var brandModel = _context.Brands.Include("Phones")
-                .Single(c => c.Name == brand);
+                .Single(i => i.Name == brand);
             return View(brandModel);
         }
 
         public ActionResult Details(int id)
         {
-            var Phone = _context.Phones.Find(id);
-            return View(Phone);
+            var phone = _context.Phones.Find(id);
+            return View(phone);
         }
     }
 }
