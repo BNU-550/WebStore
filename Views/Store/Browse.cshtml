@@ -1,0 +1,16 @@
+@model WebStore.Models.Brand
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Brand:@Model.Name </h2>
+<ul>
+    @foreach (var phone in Model.Phones)
+    {
+        <li>
+            @Html.ActionLink(phone.Title, "Details", new { id = phone.PhoneId })
+        </li>
+    }
+</ul>
+

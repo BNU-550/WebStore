@@ -1,0 +1,22 @@
+@model IEnumerable<WebStore.Models.Brand>
+
+@{
+    ViewBag.Title = "Store";
+}
+
+<h2>Browse Brands</h2>
+<p>
+
+    Select from @Model.Count()
+    Brands:
+</p>
+<ul>
+    @foreach (var Brand in Model)
+    {
+        <li>
+            @Html.ActionLink(Brand.Name, "Browse", new { Brand = Brand.Name })
+        </li>
+    }
+</ul>
+
+<!--was not sure how to add list to navigation bar to provide quick and easy navigation for the user -->

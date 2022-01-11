@@ -1,0 +1,33 @@
+@model WebStore.Models.Phone
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Phones :@Model.Title</h2>
+<p>
+    <img alt="@Model.Title"
+         src="@Model.PhoneArtUrl" />
+</p>
+<div id="phone-details">
+    <p>
+        <em>Brand:</em>
+        @Model.Brand.Name
+    </p>
+    <p>
+        <em>Supplier:</em>
+        @Model.Supplier.Name
+    </p>
+    <p>
+        <em>Price:</em>
+        @String.Format("{0:F}",
+Model.Price)
+    </p>
+    <!-- Add to cart button-->
+
+    <p class="button1">
+        @Html.ActionLink("Add to cart", "AddToCart",
+        "ShoppingCart", new { id = Model.PhoneId }, "")
+    </p>
+    <div class="fb-comments" data-width="230" data-numposts="5"></div>
+</div>
