@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -65,6 +66,9 @@ namespace WebStore.Models
         public string Email { get; set; }
 
         [ScaffoldColumn(false)]
+        [DataType(DataType.Currency)]
+        [DisplayFormat(DataFormatString = "{0:C}")]
+        [Column(TypeName = "money")]
         public decimal Total { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
     }
