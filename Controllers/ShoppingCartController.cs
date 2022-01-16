@@ -70,7 +70,7 @@ namespace WebStore.Controllers
                     " has been removed from your shopping cart.",
                 CartTotal = cart.GetTotal(),
                 CartCount = cart.GetCount(),
-                ItemCount = phoneCount,
+                PhoneCount = phoneCount,
                 DeleteId = id
             };
             return Json(results);

@@ -22,11 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Content\" />
-    <Folder Include="WebStore\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\Images\iphone14.jpg" />
     <None Include="wwwroot\Images\VodaNewYears.jpg" />
   </ItemGroup>
