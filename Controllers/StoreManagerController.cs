@@ -69,8 +69,8 @@ namespace WebStore.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["BrandId"] = new SelectList(_context.Brands, "BrandId", "BrandId", phone.BrandId);
-            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "SupplierId", phone.SupplierId);
+            ViewData["BrandId"] = new SelectList(_context.Brands, "BrandId", "Name", phone.BrandId);
+            ViewData["SupplierId"] = new SelectList(_context.Suppliers, "SupplierId", "Name", phone.SupplierId);
             return View(phone);
         }
 

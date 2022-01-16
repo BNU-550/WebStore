@@ -27,7 +27,7 @@ namespace WebStore.Controllers
         {
             //Protection against outside users modifying code
             var brandModel = _context.Brands.Include("Phones")
-                .Single(i => i.Name == brand);
+                .Single(c => c.Name == brand);
             return View(brandModel);
         }
 
