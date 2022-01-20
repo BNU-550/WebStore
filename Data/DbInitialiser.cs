@@ -13,6 +13,56 @@ namespace WebStore.Data
         {
             context.Database.EnsureCreated();
 
+
+            var suppliers = new Supplier[]
+{
+            new Supplier{SupplierId=1, Name="02" },
+
+            new Supplier{SupplierId=2, Name="UNIDAYS" },
+
+            new Supplier{SupplierId=3, Name="Student Beans" },
+
+            new Supplier{SupplierId=4, Name="Totem" },
+
+            new Supplier{SupplierId=5, Name="EE" },
+
+            new Supplier{SupplierId=6, Name="GiffGaff" },
+
+            new Supplier{SupplierId=7, Name="VOXI" },
+
+            new Supplier{SupplierId=8, Name="LycaMobile" },
+
+            new Supplier{SupplierId=9, Name="EnchroEx" },
+
+            new Supplier{SupplierId=10, Name="Vodafone" },
+
+};
+
+
+            foreach (Supplier s in suppliers)
+            {
+                context.Suppliers.Add(s);
+            }
+            context.SaveChanges();
+
+            var brands = new Brand[]
+            {
+            new Brand{BrandId=1, Name="Apple", Description=""},
+
+            new Brand{BrandId=2, Name="Samsung", Description=""},
+
+            new Brand{BrandId=3, Name="Huawei", Description=""},
+
+            new Brand{BrandId=4, Name="Enchro", Description=""},
+
+            new Brand{BrandId=5, Name="Google", }
+            };
+            foreach (Brand b in brands)
+            {
+                context.Brands.Add(b);
+            }
+            context.SaveChanges();
+
             //Look for any phones.
             if (context.Phones.Any())
             {
@@ -66,54 +116,9 @@ namespace WebStore.Data
             }
             context.SaveChanges();
 
-            var brands = new Brand[]
-            {
-            new Brand{BrandId=1, Name="Apple", Description=""},
-
-            new Brand{BrandId=2, Name="Samsung", Description=""},
-
-            new Brand{BrandId=3, Name="Huawei", Description=""},
-
-            new Brand{BrandId=4, Name="Enchro", Description=""},
-
-            new Brand{BrandId=5, Name="Google", }
-            };
-            foreach (Brand b in brands)
-            {
-                context.Brands.Add(b);
-            }
-            context.SaveChanges();
-
-            var suppliers = new Supplier[]
-            {
-            new Supplier{SupplierId=1, Name="02" },
-
-            new Supplier{SupplierId=2, Name="UNIDAYS" },
-
-            new Supplier{SupplierId=3, Name="Student Beans" },
-
-            new Supplier{SupplierId=4, Name="Totem" },
-
-            new Supplier{SupplierId=5, Name="EE" },
-
-            new Supplier{SupplierId=6, Name="GiffGaff" },
-
-            new Supplier{SupplierId=7, Name="VOXI" },
-
-            new Supplier{SupplierId=8, Name="LycaMobile" },
-
-            new Supplier{SupplierId=9, Name="EnchroEx" },
-
-            new Supplier{SupplierId=10, Name="Vodafone" },
-
-            };
-
             
-            foreach (Supplier s in suppliers)
-            {
-                context.Suppliers.Add(s);
-            }
-            context.SaveChanges();
+
+
         }
     }
 }
