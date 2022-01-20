@@ -1,33 +1,61 @@
 @model WebStore.Models.Phone
 
+
+
+
+
 @{
-    ViewBag.Title = "Details";
+    ViewData["Title"] = "Details";
 }
 
-<h2>Phones :@Model.Title</h2>
-<p>
-    <img alt="@Model.Title"
-         src="@Model.PhoneArtUrl" />
-</p>
-<div id="phone-details">
-    <p>
-        <em>Brand:</em>
-        @Model.Brand
-    </p>
-    <p>
-        <em>Supplier:</em>
-        @Model.Supplier
-    </p>
-    <p>
-        <em>Price:</em>
-        @String.Format("{0:F}",
-Model.Price)
-    </p>
-    <!-- Add to cart button-->
 
-    <p class="button1">
-        @Html.ActionLink("Add to cart", "AddToCart",
-        "ShoppingCart", new { id = Model.PhoneId }, "")
-    </p>
-    <div class="fb-comments" data-width="230" data-numposts="5"></div>
+<header class="jumbotron-fluid">
+    <h1>@Model.Title</h1>
+</header>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-6 p-lg-6 mx-auto my-6">
+        <img src="/@Model.PhoneArtUrl" />
+        <p>Price @Model.Price.ToString("£00.00")</p>
+        <a class="btn btn-outline-secondary" @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.PhoneId }, "") <!-- Add to cart button-->
+            <div class="fb-comments" data-width="230" data-numposts="5"></div>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
 </div>
+
+<div>
+    
+    <dl class="d-table-row bg-light" style="font-family: Arial, Helvetica, sans-serif">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Brand.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Supplier.Name)
+        </dt>
+
+    </dl>
+   
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -63,7 +63,23 @@
                         <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Index">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="" asp-controller="StoreManager" asp-action="Index">Admin</a>
+                        <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Apple">Apple</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Samsung">Samsung</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Huawei">Huawei</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Enchro">Enchro</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-controller="Store" asp-action="Google">Google</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
@@ -84,7 +100,7 @@
 
 
 
-                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+                    <li><a asp-area="" asp-controller="ShoppingCart" asp-action="Index"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
             </div>
         </div>
@@ -111,7 +127,7 @@
                 <div class="panel panel-success">
                     <div class="panel-heading">Vodafone New Years Giveaway!</div>
                     <div class="panel-body"><img src=" Images/VodaNewYears.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
-                    <div class="panel-footer">Enter for a vhance to win a free phone of your choice!</div>
+                    <div class="panel-footer">Enter for a chance to win a free phone of your choice!</div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebStore.Models.Phone>
+
+@{
+    ViewData["Title"] = "Apple";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="jumbotron">
+    <h1>Apple</h1>
+</header>
+
+<section>
+    <div class="row">
+        @foreach (var phone in Model)
+        {
+            
+
+            <div class="col-sm-4">
+                <div class="card" >
+                    <img src="/@phone.PhoneArtUrl"
+                         class="card-img-top" alt="iPhone" width="150" />
+                    <div class="card-body">
+                        <h5 class="card-title" justify-content-sm-center>@phone.Title</h5>
+                        <p class="card-text">@phone.Price.ToString("£00.00")</p>
+                        <a asp-action="Details" asp-route-id="@phone.PhoneId"
+                           class="btn btn-outline-primary">View Phone</a>
+                    </div>
+                </div>
+            </div>
+            
+        }
+    </div>
+</section>
+
+
