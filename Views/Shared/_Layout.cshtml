@@ -42,10 +42,12 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Store" asp-action="Google">Google</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
-                        </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ShoppingCart" asp-action="cart-status">Cart</a>
+                        </li>
+                        <!-- I wanted to create a render action to display how many items were in your cart
+                            but was unsure of the equivelant in mvc-->
                     </ul>
 
                     <partial name="_LoginPartial" />

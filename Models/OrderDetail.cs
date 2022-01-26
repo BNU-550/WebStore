@@ -10,7 +10,7 @@ namespace WebStore.Models
     public class OrderDetail
     {
         [Key]
-        public int OderDetailId { get; set; }
+        public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
         public int PhoneId { get; set; }
         public int Quantity { get; set; }
